@@ -1,1 +1,1 @@
-# CSS-practice
+Random stuff relating to web development.

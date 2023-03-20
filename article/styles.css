@@ -1,0 +1,166 @@
+/**
+ * Load two web fonts from Google Fonts:
+ *  1. EB Garamond - https://fonts.google.com/specimen/EB+Garamond
+ *  2. Reem Kufi   - https://fonts.google.com/specimen/Reem+Kufi
+ */
+@import url(https://fonts.googleapis.com/css2?family=EB+Garamond&family=Reem+Kufi&display=swap);
+@import url(http://db.onlinewebfonts.com/c/1e44faec07b8b81f60a3215d76bd0086?family=Irvin);
+
+/**
+ * Load the Irvin Heading font - https://www.onlinewebfonts.com/download/1e44faec07b8b81f60a3215d76bd0086
+ * NOTE: on GitHub, which is loading over HTTPS, these fonts have to be loaded
+ * over HTTPS vs. HTTP, so instead of using @import url('https://db.onlinewebfonts.com/c/1e44faec07b8b81f60a3215d76bd0086?family=Irvin');
+ * I'm defining the font-face manually with proper HTTPS URLs
+ */
+ @font-face {font-family: "Irvin";
+    src: url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.eot"); /* IE9*/
+    src: url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.woff2") format("woff2"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.woff") format("woff"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.svg#Irvin") format("svg"); /* iOS 4.1- */
+  }
+
+body{
+    margin: 40px;
+}
+
+header,main{
+    max-width: 600px;
+}
+
+header h1,
+header h2{
+    font-family: Irvin, serif;
+}
+
+header h1{
+    font-size: 2.8em;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+header h2{
+    color:red;
+    font-size: .8em;
+}
+
+header p{
+    font-family: 'Reem Kufi', sans-serif;
+}
+
+#social {
+    display: none;
+    color: black;
+  }
+  
+#social i {
+    padding: 20px 25px;
+  }
+
+#author{
+    font-weight: bold;
+}
+
+hr{
+    border: 0;
+    height: 0;
+    border-top: 1px solid lightgray;
+}
+
+main{
+font-family: 'EB Garamond', 'Times New Roman', serif;
+font-size: 1.3em;
+line-height: 1.6;
+max-width: 550px;            /* limit number of words per line */
+margin: 20px 50px;
+}
+
+/* dropcap effect, https://css-tricks.com/snippets/css/drop-caps/ */
+.first-letter {
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    float: left;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: .8em;
+    line-height: 1.2;
+}
+
+.credit {
+    color: gray;
+    font-family: sans-serif;
+    font-style: normal;
+    font-size: .7em;
+}
+
+.credit a {
+    text-decoration: none;
+    color: gray;
+}
+
+.credit a:hover {
+    text-decoration: none;
+    color: gray;
+}
+
+figure {
+    margin: 10px;
+}
+
+img {
+max-width: 100%;
+}
+
+/* formatting for when window is resized
+
+ * When we're on a screen (vs. print, etc) and the width is less than 900 px,
+ * centre everything.  Otherwise we'll left-align
+ */
+@media screen and (max-width: 700px) {
+    /**
+   * When we're on a screen (vs. print, etc) and the width is less than 900 px,
+   * centre everything.  Otherwise we'll left-align
+   */
+   header {
+    text-align: center;
+    margin: 10px;
+}
+
+   /**
+   * Get rid of the whitespace at the edge of the body (show more content)
+   */
+    body {
+        margin: 0;
+        width: 100%;
+    }
+
+    /**
+   * Show the social sharing icons on small screens, hidden otherwise.
+   */
+    #social {
+        display: block;
+    }
+
+    #social i {
+        padding: 20px 25px;
+    }
+
+    /**
+   * Let the two main containers in the <body> fill the viewport
+   */
+    header, main {
+        max-width: 100%;
+    }   
+
+    /**
+   * Reduce the margin on the main content
+   */
+    main {
+        margin: 10px;
+    }
+}
