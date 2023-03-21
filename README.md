@@ -1,1 +1,1 @@
-Random stuff relating to web development.
+For practicing HTML and CSS.
